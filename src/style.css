@@ -171,3 +171,7 @@ h1 {
   vertical-align: top;
   line-height: 110px;
 }
+
+.link-footer {
+  text-align: center;
+}
