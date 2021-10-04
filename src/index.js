@@ -1,4 +1,4 @@
-// fecha actual
+/* fecha actual
 
 let now = new Date();
 let dinamicDate = document.querySelector("#currentDate");
@@ -25,7 +25,34 @@ let days = [
 ];
 let day = days[now.getDay()];
 
-dinamicDate.innerHTML = `${day}, ${hours}:${minutes}`;
+dinamicDate.innerHTML = `${day}, ${hours}:${minutes}`; */
+
+function formatDate(timestamp) {
+  //Calculate de Date
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[date.getDay()];
+
+  return `${day}, ${hours}:${minutes}`;
+}
 
 // Temperature
 
@@ -55,6 +82,8 @@ function displayWeatherCondition(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].main);
+  let dateElement = document.querySelector("#date");
+  dateElement.innerHTML = formatDate(response.data.dt * 1000);
 }
 
 // city name
