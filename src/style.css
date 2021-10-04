@@ -13,6 +13,7 @@ body {
   );
 
   width: 100%;
+  height: 100%;
 }
 
 h1 {
@@ -35,8 +36,7 @@ h1 {
 }
 
 .emoji-weather {
-  font-size: 50px;
-  padding-top: 25px;
+  padding-top: 20px;
 }
 
 .city-name {
@@ -80,7 +80,7 @@ h1 {
 }
 
 .emoji-weather-s {
-  font-size: 30px;
+  font-size: 40px;
   text-align: center;
 }
 
@@ -174,4 +174,5 @@ h1 {
 
 .link-footer {
   text-align: center;
+  margin-top: 20px;
 }

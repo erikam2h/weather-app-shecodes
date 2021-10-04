@@ -21,119 +21,124 @@
 
   <body>
     <div class="container-fluid m-0 p-5">
-      <div class="row justify-content-md-center">
-        <div class="col-4">
-          <h1 class="heading">Daily <b>weather</b></h1>
-        </div>
-
-        <form class="search-form col-7" id="search-form">
-          <div class="row">
-            <div class="col-4">
-              <input
-                type="search"
-                placeholder="Type a city.."
-                autofocus="on"
-                autocomplete="off"
-                id="city-input"
-                class="form-control shadow-sm"
-              />
-            </div>
-            <div class="col-3">
-              <input
-                type="submit"
-                value="Search"
-                class="button-submit shadow-sm w-100"
-              />
-            </div>
-
-            <div class="col-4">
-              <button class="button-current w-100" id="myCity">My city</button>
-            </div>
+      <div class="container w-70">
+        <div class="row justify-content-md-center">
+          <div class="col-4">
+            <h1 class="heading">Daily <b>weather</b></h1>
           </div>
-        </form>
-      </div>
 
-      <!-- Sección de clima y ciudad-->
-      <div class="row justify-content-md-center mt-3">
-        <div class="col-6">
-          <div class="row">
-            <div class="col-4">
-              <p class="emoji-weather" id="icon-lg">☀</p>
-              <span class="type" id="weather-type"></span>
-            </div>
-            <div class="col-8">
-              <div class="weather-lg">
-                <span id="temperature"></span
-                ><span class="grados-link">°C</span>
+          <form class="search-form col-7" id="search-form">
+            <div class="row">
+              <div class="col-4">
+                <input
+                  type="search"
+                  placeholder="Type a city.."
+                  autofocus="on"
+                  autocomplete="off"
+                  id="city-input"
+                  class="form-control shadow-sm"
+                />
               </div>
-              <div class="min-max">
-                Min: <span id="min"></span> / Max: <span id="max"></span>
+              <div class="col-3">
+                <input
+                  type="submit"
+                  value="Search"
+                  class="button-submit shadow-sm w-100"
+                />
+              </div>
+
+              <div class="col-4">
+                <button class="button-current w-100" id="myCity">
+                  My city
+                </button>
               </div>
             </div>
+          </form>
+        </div>
+
+        <!-- Sección de clima y ciudad-->
+        <div class="row justify-content-md-center mt-3 mb-5">
+          <div class="col-6">
+            <div class="row">
+              <div class="col-4">
+                <img
+                  src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png"
+                  alt="Icon Weather"
+                  id="icon"
+                  class="float-left emoji-weather"
+                />
+                <br />
+                <span class="type" id="weather-type"></span>
+              </div>
+              <div class="col-8">
+                <div class="weather-lg">
+                  <span id="temperature"></span
+                  ><span class="grados-link">°C</span>
+                </div>
+                <div class="min-max">
+                  Min: <span id="min"></span> / Max: <span id="max"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-4">
+            <!--Columna con datos de ciudad, fecha, humedad y viento-->
+            <h3 class="city-name" id="city-name"></h3>
+            <p class="date" id="currentDate">Sunday, 05 september. 12 hrs</p>
+            <hr />
+            <div class="humidity-wind">
+              Humidity:
+              <span id="humidity"></span>% - Wind: <span id="wind"></span> km/h
+            </div>
           </div>
         </div>
+        <!--/ Fin sección de clima y ciudad-->
 
-        <div class="col-4">
-          <!--Columna con datos de ciudad, fecha, humedad y viento-->
-          <h3 class="city-name" id="city-name"></h3>
-          <p class="date" id="currentDate">Sunday, 05 september. 12 hrs</p>
-          <hr />
-          <div class="humidity-wind">
-            Humidity:
-            <span id="humidity"></span>% - Wind: <span id="wind"></span> km/h
+        <div class="row justify-content-md-center mt-4">
+          <div class="col-lg-2 col-sm-4 box-day">
+            <p class="day">Monday</p>
+            <p class="emoji-weather-s">☀</p>
+            <hr class="box-line" />
+            <p class="min-max-s">7°C| 28°C</p>
           </div>
-        </div>
-      </div>
-      <!--/ Fin sección de clima y ciudad-->
 
-      <div class="row justify-content-md-center mt-4">
-        <div class="col-lg-2 col-sm-4 box-day">
-          <p class="day">Monday</p>
-          <p class="emoji-weather-s">☀</p>
-          <h2 class="weather-s">22°C</h2>
-          <hr class="box-line" />
-          <p class="min-max-s">7°C| 28°C</p>
-        </div>
+          <div class="col-lg-2 col-sm-4 box-day">
+            <p class="day">Tuesday</p>
+            <p class="emoji-weather-s">🌤</p>
+            <hr class="box-line" />
+            <p class="min-max-s">7°C | 28°C</p>
+          </div>
 
-        <div class="col-lg-2 col-sm-4 box-day">
-          <p class="day">Tuesday</p>
-          <p class="emoji-weather-s">🌤</p>
-          <h2 class="weather-s">20°C</h2>
-          <hr class="box-line" />
-          <p class="min-max-s">7°C | 28°C</p>
-        </div>
+          <div class="col-lg-2 col-sm-4 box-day">
+            <p class="day">Wednesday</p>
+            <p class="emoji-weather-s">☀</p>
+            <hr class="box-line" />
+            <p class="min-max-s">7°C | 28°C</p>
+          </div>
 
-        <div class="col-lg-2 col-sm-4 box-day">
-          <p class="day">Wednesday</p>
-          <p class="emoji-weather-s">☀</p>
-          <h2 class="weather-s">26°C</h2>
-          <hr class="box-line" />
-          <p class="min-max-s">7°C | 28°C</p>
-        </div>
+          <div class="col-lg-2 col-sm-4 box-day">
+            <p class="day">Thursday</p>
+            <p class="emoji-weather-s">🌦</p>
+            <hr class="box-line" />
+            <p class="min-max-s">7°C | 22°C</p>
+          </div>
 
-        <div class="col-lg-2 col-sm-4 box-day">
-          <p class="day">Thursday</p>
-          <p class="emoji-weather-s">🌦</p>
-          <h2 class="weather-s">19°C</h2>
-          <hr class="box-line" />
-          <p class="min-max-s">7°C | 22°C</p>
-        </div>
-
-        <div class="col-lg-2 col-sm-4 box-day">
-          <p class="day">Friday</p>
-          <p class="emoji-weather-s">🌧</p>
-          <h2 class="weather-s">16°C</h2>
-          <hr class="box-line" />
-          <p class="min-max-s">5°C | 18°C</p>
-        </div>
-        <div class="col-12 link-footer">
-          <a
-            href="https://github.com/erikam2h/weather-app-shecodes"
-            target="_blank"
-            rel="noreferrer"
-            >Open source code</a
-          >
-          by Erika Mora
+          <div class="col-lg-2 col-sm-4 box-day">
+            <p class="day">Friday</p>
+            <p class="emoji-weather-s">🌧</p>
+            <hr class="box-line" />
+            <p class="min-max-s">5°C | 18°C</p>
+          </div>
+          <div class="col-12 link-footer mt-4">
+            <a
+              href="https://github.com/erikam2h/weather-app-shecodes"
+              target="_blank"
+              rel="noreferrer"
+              >Open source code</a
+            >
+            by Erika Mora
+          </div>
         </div>
       </div>
     </div>
