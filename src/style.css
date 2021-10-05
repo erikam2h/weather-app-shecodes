@@ -21,7 +21,6 @@ h1 {
   font-weight: 400;
   color: #40356f;
   font-size: 25px;
-  text-align: center;
 }
 
 a {
@@ -53,7 +52,7 @@ a {
 }
 
 .humidity-wind {
-  font-size: 18px;
+  font-size: 20px;
   font-family: "Montserrat", sans-serif;
   color: #40356f;
   font-weight: 400;
@@ -184,4 +183,11 @@ a {
 .active:hover {
   cursor: default;
   color: #4262c5;
+}
+
+.box-white {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 10px;
+  padding: 15px;
 }

@@ -30,7 +30,7 @@
 
           <form class="search-form col-lg-7 col-sm-12" id="search-form">
             <div class="row">
-              <div class="col-4">
+              <div class="col-lg-4 col-sm-12">
                 <input
                   type="search"
                   placeholder="Type a city.."
@@ -40,7 +40,7 @@
                   class="form-control shadow-sm"
                 />
               </div>
-              <div class="col-3">
+              <div class="col-lg-3 col-sm-6">
                 <input
                   type="submit"
                   value="Search"
@@ -48,7 +48,7 @@
                 />
               </div>
 
-              <div class="col-4">
+              <div class="col-lg-4 col-sm-6">
                 <button class="button-current w-100" id="myCity">
                   My city
                 </button>
@@ -59,7 +59,18 @@
 
         <!-- Sección de clima y ciudad-->
         <div class="row justify-content-md-center mt-3 mb-5">
-          <div class="col-6">
+          <!--Columna con datos de ciudad, fecha, humedad y viento-->
+          <div class="col-4">
+            <h3 class="city-name" id="city-name"></h3>
+            <p class="date">Last updated: <span id="date"></span></p>
+            <hr style="width: 80%" />
+            <div class="humidity-wind">
+              Humidity:
+              <span id="humidity"></span>% - Wind: <span id="wind"></span> km/h
+            </div>
+          </div>
+
+          <div class="col-lg-7 col-sm-12">
             <div class="row">
               <div class="col-4">
                 <img
@@ -85,17 +96,6 @@
                   Min: <span id="min"></span> | Max: <span id="max"></span>
                 </div>
               </div>
-            </div>
-          </div>
-
-          <div class="col-4">
-            <!--Columna con datos de ciudad, fecha, humedad y viento-->
-            <h3 class="city-name" id="city-name"></h3>
-            <p class="date">Last updated: <span id="date"></span></p>
-            <hr />
-            <div class="humidity-wind">
-              Humidity:
-              <span id="humidity"></span>% - Wind: <span id="wind"></span> km/h
             </div>
           </div>
         </div>
