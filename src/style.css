@@ -24,6 +24,10 @@ h1 {
   text-align: center;
 }
 
+a {
+  color: #4262c5;
+}
+
 .heading {
   font-size: 30px;
   text-transform: uppercase;
@@ -74,12 +78,6 @@ h1 {
   font-weight: 600;
 }
 
-.weather-s {
-  font-size: 40px;
-  font-weight: 300;
-  text-align: center;
-}
-
 .emoji-weather-s {
   font-size: 40px;
   text-align: center;
@@ -87,7 +85,7 @@ h1 {
 
 .min-max {
   margin-top: -15px;
-  font-size: 18px;
+  font-size: 22px;
   font-family: "Montserrat", sans-serif;
   color: #40356f;
   font-weight: 400;
@@ -98,6 +96,7 @@ h1 {
   text-align: center;
   font-family: "Montserrat", sans-serif;
   color: #40356f;
+  font-size: 20px;
 }
 
 .type {
@@ -167,13 +166,22 @@ h1 {
 
 .grados-link {
   text-decoration: none;
-  font-size: 50px;
+  font-size: 40px;
   color: #4262c5;
   vertical-align: top;
-  line-height: 110px;
+  line-height: 100px;
 }
 
 .link-footer {
   text-align: center;
   margin-top: 20px;
+}
+
+.active {
+  text-decoration: none;
+}
+
+.active:hover {
+  cursor: default;
+  color: #4262c5;
 }
