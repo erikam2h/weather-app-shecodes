@@ -59,43 +59,13 @@ a {
   font-kerning: 20px;
 }
 
-.box-day {
-  border-radius: 20px;
-  border: 1px solid #c4c1e0;
-  margin: 10px;
-  padding: 10px;
-  background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
-  align-items: center;
-}
-
-.day {
-  font-size: 20px;
-  font-weight: 900;
-  text-align: center;
-  font-family: "Montserrat", sans-serif;
-  color: #40356f;
-  font-weight: 600;
-}
-
-.emoji-weather-s {
-  font-size: 40px;
-  text-align: center;
-}
-
 .min-max {
   margin-top: -15px;
-  font-size: 22px;
+  font-size: 20px;
   font-family: "Montserrat", sans-serif;
   color: #40356f;
   font-weight: 400;
   font-kerning: 20px;
-}
-
-.min-max-s {
-  text-align: center;
-  font-family: "Montserrat", sans-serif;
-  color: #40356f;
-  font-size: 20px;
 }
 
 .type {
@@ -171,11 +141,6 @@ a {
   line-height: 100px;
 }
 
-.link-footer {
-  text-align: center;
-  margin-top: 20px;
-}
-
 .active {
   text-decoration: none;
 }
@@ -185,9 +150,57 @@ a {
   color: #4262c5;
 }
 
-.box-white {
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 10px;
-  padding: 15px;
+/**Estilos forecast**/
+
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+  color: #000;
+  font-family: "Montserrat", sans-serif;
+}
+
+.box-day {
+  border-radius: 20px;
+  border: 1px solid #c4c1e0;
+  margin: 10px;
+  padding: 10px;
+  background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+  align-items: center;
+}
+
+.forecast-date {
+  font-size: 20px;
+  font-weight: 900;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  color: #40356f;
+  font-weight: 600;
+  padding-bottom: 10px;
+}
+
+.emoji-weather-s {
+  font-size: 40px;
+  text-align: center;
+}
+.forecast-temperatures {
+  color: #40356f;
+  padding-top: 20px;
+  font-size: 20px;
+}
+
+.forecast-max {
+  font-weight: 900;
+  padding-right: 5px;
+}
+
+.forecast-min {
+  font-weight: 600;
+  opacity: 0.5;
+  padding-left: 5px;
+}
+
+.link-footer {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: 600;
 }
