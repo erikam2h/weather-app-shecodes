@@ -13,22 +13,39 @@ function formatDate(timestamp) {
     minutes = `0${minutes}`;
   }
 
-  let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
+  let days = ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
   let day = days[date.getDay()];
 
   return `${day}, ${hours}:${minutes}`;
 }
 
-// Temperature
+//Forecast
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  forecastHTML = `<div class="row justify-content-md-center mt-4">`;
+  let days = ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+      <div class="col-lg-2 col-sm-6 box-day">
+        <div class="forecast-date">${day}</div>
+        <img src="weather.png" alt="icono-clima" style="width: 80px" />
+        <div class="forecast-temperatures">
+          <span class="forecast-max"> 18° </span>
+          <span class="forecast-min"> 12° </span>
+        </div>
+      </div>
+  `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+
+  forecastElement.innerHTML = forecastHTML;
+}
+
+// Temperature
 function displayWeatherCondition(response) {
   //console.log(response.data);  (mostrar información en la consola al inspeccionar)
   //console.log(response.data.name);  (mostrar nombre de la ciudad en la consola al inspeccionar)
@@ -127,3 +144,4 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemp);
 
 searchCity("Berlin");
+displayForecast();
