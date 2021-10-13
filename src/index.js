@@ -50,8 +50,6 @@ function displayForecast(response) {
 
   let forecastElement = document.querySelector("#forecast");
   forecastHTML = `<div class="row justify-content-md-center mt-4">`;
-
-  // let days = ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
   forecast.forEach(function (forecastDay, index) {
     if (index < 5) {
       forecastHTML =
@@ -102,13 +100,13 @@ function displayWeatherCondition(response) {
   );
   document.querySelector("#weather-type").innerHTML =
     response.data.weather[0].main;
-
+  /*
   document.querySelector("#min").innerHTML = Math.round(
     response.data.main.temp_min
   );
   document.querySelector("#max").innerHTML = Math.round(
     response.data.main.temp_max
-  );
+  );*/
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute(
     "src",

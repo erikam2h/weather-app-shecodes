@@ -60,14 +60,9 @@
         <!-- Sección de clima y ciudad-->
         <div class="row justify-content-md-center mt-3 mb-5">
           <!--Columna con datos de ciudad, fecha, humedad y viento-->
-          <div class="col-4">
+          <div class="col-lg-4 col-sm-12">
             <h3 class="city-name" id="city-name"></h3>
             <p class="date">Last updated: <span id="date"></span></p>
-            <hr style="width: 80%" />
-            <div class="humidity-wind">
-              Humidity:
-              <span id="humidity"></span>% - Wind: <span id="wind"></span> km/h
-            </div>
           </div>
 
           <div class="col-lg-7 col-sm-12">
@@ -78,8 +73,6 @@
                   alt="Icon Weather"
                   id="icon"
                 />
-                <br />
-                <span class="type" id="weather-type"></span>
               </div>
               <div class="col-8">
                 <div class="weather-lg">
@@ -90,11 +83,13 @@
                     <a href="#" id="fahrenheit-link">°F</a>
                   </span>
                 </div>
-
-                <div class="min-max">
-                  Min: <span class="forecast-max" id="min"></span> | Max:
-                  <span class="forecast-min" id="max"></span>
-                </div>
+              </div>
+              <hr width="80%" />
+              <div class="humidity-wind">
+                <span class="type" id="weather-type"></span>
+                Humidity:
+                <span id="humidity"></span>% - Wind:
+                <span id="wind"></span> km/h
               </div>
             </div>
           </div>

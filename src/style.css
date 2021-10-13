@@ -34,6 +34,7 @@ a {
   font-weight: 900;
   font-family: "Montserrat", sans-serif;
   color: #4262c5;
+  line-height: 115px;
 }
 
 .emoji-weather {
@@ -54,6 +55,7 @@ a {
   color: #40356f;
   font-weight: 400;
   font-kerning: 20px;
+  text-align: center;
 }
 
 .min-max {
@@ -62,16 +64,15 @@ a {
   font-family: "Montserrat", sans-serif;
   color: #40356f;
   font-weight: 400;
-  font-kerning: 20px;
+  font-kerning: 30px;
 }
 
 .type {
   font-weight: 900;
-  font-size: 20px;
   color: #40356f;
   text-transform: capitalize;
   text-align: center;
-  padding-left: 10px;
+  padding-right: 30px;
 }
 
 .date {
