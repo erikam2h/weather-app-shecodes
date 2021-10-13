@@ -24,6 +24,11 @@ a {
   color: #4262c5;
 }
 
+img {
+  display: block;
+  margin: 0 auto;
+}
+
 .heading {
   font-size: 30px;
   text-transform: uppercase;
@@ -34,7 +39,6 @@ a {
   font-weight: 900;
   font-family: "Montserrat", sans-serif;
   color: #4262c5;
-  line-height: 115px;
 }
 
 .emoji-weather {
@@ -55,7 +59,6 @@ a {
   color: #40356f;
   font-weight: 400;
   font-kerning: 20px;
-  text-align: center;
 }
 
 .min-max {
@@ -68,15 +71,11 @@ a {
 }
 
 .type {
-  font-weight: 900;
-  color: #40356f;
-  text-transform: capitalize;
   text-align: center;
-  padding-right: 30px;
 }
 
 .date {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
   font-family: "Montserrat", sans-serif;
   color: #40356f;
@@ -193,7 +192,7 @@ a {
 
 .forecast-min {
   font-weight: 600;
-  opacity: 0.5;
+  opacity: 0.6;
   padding-left: 5px;
 }
 

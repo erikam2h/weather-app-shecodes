@@ -63,33 +63,27 @@
           <div class="col-lg-4 col-sm-12">
             <h3 class="city-name" id="city-name"></h3>
             <p class="date">Last updated: <span id="date"></span></p>
+            <div class="humidity-wind">
+              Humidity:
+              <span id="humidity"></span>% - Wind: <span id="wind"></span> km/h
+            </div>
           </div>
 
           <div class="col-lg-7 col-sm-12">
             <div class="row">
-              <div class="col-4">
+              <div class="col-6">
                 <img
                   src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png"
                   alt="Icon Weather"
                   id="icon"
                 />
+                <p class="humidity-wind type" id="weather-type"></p>
               </div>
-              <div class="col-8">
+              <div class="col-6">
                 <div class="weather-lg">
                   <span id="temperature"></span>
-                  <span class="grados-link">
-                    <a href="#" id="celsius-link" class="active">°C</a>
-                    <span style="font-weight: 400">|</span>
-                    <a href="#" id="fahrenheit-link">°F</a>
-                  </span>
+                  <span class="grados-link">°C</span>
                 </div>
-              </div>
-              <hr width="80%" />
-              <div class="humidity-wind">
-                <span class="type" id="weather-type"></span>
-                Humidity:
-                <span id="humidity"></span>% - Wind:
-                <span id="wind"></span> km/h
               </div>
             </div>
           </div>

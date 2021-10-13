@@ -115,8 +115,6 @@ function displayWeatherCondition(response) {
   iconElement.setAttribute("alt", response.data.weather[0].main);
   let dateElement = document.querySelector("#date");
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
-  celsiusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
 
   celsiusTemperature = response.data.main.temp;
 
@@ -154,24 +152,6 @@ function getCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
 
-function displayFahrenheitTemp(event) {
-  event.preventDefault();
-  let tempElement = document.querySelector("#temperature");
-  // remove the active class to Celsius and add to fahrenheit
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-  fahrenheitTemp = (celsiusTemperature * 9) / 5 + 32;
-  tempElement.innerHTML = Math.round(fahrenheitTemp);
-}
-
-function displayCelsiusTemp(event) {
-  event.preventDefault();
-  let tempElement = document.querySelector("#temperature");
-  celsiusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
-  tempElement.innerHTML = Math.round(celsiusTemperature);
-}
-
 let celsiusTemperature = null;
 
 let searchForm = document.querySelector("#search-form");
@@ -179,11 +159,5 @@ searchForm.addEventListener("submit", handleSubmit);
 
 let currentLocationBtn = document.querySelector("#myCity");
 currentLocationBtn.addEventListener("click", getCurrentLocation);
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", displayCelsiusTemp);
 
 searchCity("Berlin");
