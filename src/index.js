@@ -21,7 +21,8 @@ function formatDate(timestamp) {
 
 //Forecast
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
   forecastHTML = `<div class="row justify-content-md-center mt-4">`;
   let days = ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
@@ -43,6 +44,13 @@ function displayForecast() {
   forecastHTML = forecastHTML + `</div>`;
 
   forecastElement.innerHTML = forecastHTML;
+}
+
+function getForecast(coordinates) {
+  let apiKey = "20b66a5f117dcc9a1ccb7403aa799b09";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+
+  axios.get(apiUrl).then(displayForecast);
 }
 
 // Temperature
@@ -78,6 +86,8 @@ function displayWeatherCondition(response) {
   fahrenheitLink.classList.remove("active");
 
   celsiusTemperature = response.data.main.temp;
+
+  getForecast(response.data.coord);
 }
 
 // city name
@@ -144,4 +154,3 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemp);
 
 searchCity("Berlin");
-displayForecast();
